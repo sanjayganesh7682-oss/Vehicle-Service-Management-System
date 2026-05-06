@@ -1,0 +1,102 @@
+{
+  "name": "Vehicle",
+  "type": "object",
+  "properties": {
+    "owner_email": {
+      "type": "string",
+      "description": "Email of the vehicle owner"
+    },
+    "owner_name": {
+      "type": "string",
+      "description": "Name of the vehicle owner"
+    },
+    "make": {
+      "type": "string",
+      "description": "Vehicle manufacturer"
+    },
+    "model": {
+      "type": "string",
+      "description": "Vehicle model"
+    },
+    "year": {
+      "type": "number",
+      "description": "Year of manufacture"
+    },
+    "license_plate": {
+      "type": "string",
+      "description": "License plate number"
+    },
+    "vin": {
+      "type": "string",
+      "description": "Vehicle identification number"
+    },
+    "color": {
+      "type": "string"
+    },
+    "mileage": {
+      "type": "number"
+    },
+    "vehicle_type": {
+      "type": "string",
+      "enum": [
+        "bike",
+        "car",
+        "heavy_vehicle",
+        "electric_bike",
+        "electric_car",
+        "scooty"
+      ],
+      "default": "car",
+      "description": "Type of vehicle"
+    },
+    "fuel_type": {
+      "type": "string",
+      "enum": [
+        "petrol",
+        "diesel",
+        "electric",
+        "cng",
+        "hybrid"
+      ],
+      "default": "petrol",
+      "description": "Fuel type"
+    },
+    "insurance_expiry": {
+      "type": "string",
+      "format": "date",
+      "description": "Insurance expiry date"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "GPS latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "GPS longitude"
+    },
+    "last_location_update": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_service_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Last service date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "in_service",
+        "inactive"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "owner_email",
+    "make",
+    "model",
+    "license_plate"
+  ]
+}

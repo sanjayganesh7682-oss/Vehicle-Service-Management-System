@@ -1,0 +1,62 @@
+{
+  "name": "Inventory",
+  "type": "object",
+  "properties": {
+    "part_name": {
+      "type": "string",
+      "description": "Name of the part or item"
+    },
+    "part_number": {
+      "type": "string",
+      "description": "Part/SKU number"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "engine",
+        "brakes",
+        "tyres",
+        "electrical",
+        "body",
+        "filters",
+        "fluids",
+        "transmission",
+        "suspension",
+        "other"
+      ],
+      "default": "other"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 0,
+      "description": "Current stock quantity"
+    },
+    "min_quantity": {
+      "type": "number",
+      "default": 5,
+      "description": "Minimum stock alert level"
+    },
+    "unit_price": {
+      "type": "number",
+      "description": "Price per unit in INR"
+    },
+    "supplier": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string",
+      "description": "Storage location in workshop"
+    },
+    "compatible_vehicles": {
+      "type": "string",
+      "description": "Compatible vehicle types"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "part_name",
+    "quantity"
+  ]
+}

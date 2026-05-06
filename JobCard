@@ -1,0 +1,62 @@
+{
+  "name": "JobCard",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "description": "Linked ServiceOrder ID"
+    },
+    "mechanic_email": {
+      "type": "string"
+    },
+    "mechanic_name": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "vehicle_make": {
+      "type": "string"
+    },
+    "vehicle_model": {
+      "type": "string"
+    },
+    "vehicle_plate": {
+      "type": "string"
+    },
+    "problem_description": {
+      "type": "string"
+    },
+    "service_type": {
+      "type": "string",
+      "description": "Type of service performed",
+      "enum": [
+        "Oil Change",
+        "Brake Service",
+        "Tyre Rotation / Replacement",
+        "Engine Tune-Up",
+        "Battery Replacement",
+        "AC Service",
+        "Wheel Alignment",
+        "Suspension Repair",
+        "Electrical Diagnostics",
+        "Transmission Service",
+        "Coolant Flush",
+        "Full Service",
+        "Body Work",
+        "Inspection",
+        "Other"
+      ]
+    },
+    "work_performed": {
+      "type": "string"
+    },
+    "mechanic_notes": {
+      "type": "string",
+      "description": "Internal notes from mechanic"
+    },
+    "parts_used": {
+ 

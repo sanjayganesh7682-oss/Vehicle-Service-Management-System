@@ -1,0 +1,37 @@
+{
+  "name": "ServiceOrder",
+  "type": "object",
+  "properties": {
+    "vehicle_id": {
+      "type": "string",
+      "description": "ID of the vehicle"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "mechanic_email": {
+      "type": "string"
+    },
+    "mechanic_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "Brief description of the service"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "in_progress",
+        "completed",
+        "cancelled",
+ 

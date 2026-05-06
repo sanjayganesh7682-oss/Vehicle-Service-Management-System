@@ -1,0 +1,99 @@
+{
+  "name": "Bill",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string"
+    },
+    "job_card_id": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "vehicle_make": {
+      "type": "string"
+    },
+    "vehicle_model": {
+      "type": "string"
+    },
+    "vehicle_plate": {
+      "type": "string"
+    },
+    "mechanic_name": {
+      "type": "string"
+    },
+    "service_title": {
+      "type": "string"
+    },
+    "parts_breakdown": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "part_name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "labor_cost": {
+      "type": "number",
+      "default": 0
+    },
+    "parts_total": {
+      "type": "number",
+      "default": 0
+    },
+    "discount_percent": {
+      "type": "number",
+      "default": 0,
+      "description": "Discount percentage applied"
+    },
+    "discount_amount": {
+      "type": "number",
+      "default": 0
+    },
+    "gst_percent": {
+      "type": "number",
+      "default": 0,
+      "description": "GST percentage applied"
+    },
+    "gst_amount": {
+      "type": "number",
+      "default": 0
+    },
+    "grand_total": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "issued",
+        "paid"
+      ],
+      "default": "draft"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "customer_email",
+    "service_title"
+  ]
+}

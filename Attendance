@@ -1,0 +1,56 @@
+{
+  "name": "Attendance",
+  "type": "object",
+  "properties": {
+    "staff_email": {
+      "type": "string",
+      "description": "Staff member email"
+    },
+    "staff_name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "mechanic",
+        "admin"
+      ],
+      "default": "mechanic"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Attendance date"
+    },
+    "check_in": {
+      "type": "string",
+      "description": "Check-in time (HH:MM)"
+    },
+    "check_out": {
+      "type": "string",
+      "description": "Check-out time (HH:MM)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "present",
+        "absent",
+        "half_day",
+        "leave"
+      ],
+      "default": "present"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "hours_worked": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "staff_email",
+    "date",
+    "status"
+  ]
+}

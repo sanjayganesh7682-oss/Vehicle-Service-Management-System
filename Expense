@@ -1,0 +1,64 @@
+{
+  "name": "Expense",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Expense title / description"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount in INR"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "salary",
+        "rent",
+        "utilities",
+        "parts_purchase",
+        "equipment",
+        "marketing",
+        "maintenance",
+        "insurance",
+        "fuel",
+        "other"
+      ],
+      "default": "other"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of expense"
+    },
+    "paid_to": {
+      "type": "string",
+      "description": "Vendor / person paid"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "cash",
+        "bank_transfer",
+        "upi",
+        "cheque",
+        "card"
+      ],
+      "default": "cash"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "recurring": {
+      "type": "boolean",
+      "default": false,
+      "description": "Is this a recurring monthly expense?"
+    }
+  },
+  "required": [
+    "title",
+    "amount",
+    "category",
+    "date"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Feedback",
+  "type": "object",
+  "properties": {
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "string",
+      "description": "Related service order ID (optional)"
+    },
+    "vehicle_plate": {
+      "type": "string"
+    },
+    "service_type": {
+      "type": "string"
+    },
+    "mechanic_name": {
+      "type": "string"
+    },
+    "overall_rating": {
+      "type": "number",
+      "description": "1-5 stars"
+    },
+    "service_quality": {
+      "type": "number",
+      "description": "1-5 stars"
+    },
+    "staff_behavior": {
+      "type": "number",
+      "description": "1-5 stars"
+    },
+    "value_for_money": {
+      "type": "number",
+      "description": "1-5 stars"
+    },
+    "timeliness": {
+      "type": "number",
+      "description": "1-5 stars"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "would_recommend": {
+      "type": "boolean",
+      "default": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "reviewed",
+        "resolved"
+      ],
+      "default": "new"
+    },
+    "admin_reply": {
+      "type": "string"
+    }
+  },
+ 
